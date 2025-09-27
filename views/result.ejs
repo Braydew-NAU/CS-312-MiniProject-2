@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+<h2>Cocktail Results</h2>
+
+<% if (cocktails && cocktails.length > 0) { %>
+  <div class="cocktail-grid">
+    <% cocktails.forEach(cocktail => { %>
+      <div class="cocktail-card">
+        <a href="/drink/<%= cocktail.idDrink %>">
+          <h3><%= cocktail.strDrink %></h3>
+          <img src="<%= cocktail.strDrinkThumb %>" alt="<%= cocktail.strDrink %>">
+        </a>
+      </div>
+    <% }) %>
+  </div>
+<% } else { %>
+  <p>No cocktails found.</p>
+<% } %>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,19 @@
+<%# Include header %>
+<%- include("partials/header") %>
+
+<%# html for home page %>
+<h2>Cocktail Finder</h2>
+
+<%# form to search by name %>
+<form action="/search" method="POST">
+    <label for="drinkName">Enter cocktail name:</label>
+    <input type="text" id="drinkName" name="name" placeholder="Ex. Margarita" required>
+    <button type="submit">Search</button>
+</form>
+
+<%# button for random cocktail %>
+<form method="GET" action="/random">
+    <button>Get Random Cocktail</button>
+</form>
+
+<%- include("partials/footer") %>
